@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.9.0-brightgreen">
-</p>
+Hai :"
 
 ## Requirement
 ```
