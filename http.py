@@ -1,5 +1,5 @@
 from __future__ import print_function
-import os, sys, colorama
+import os, sys, re, colorama
 colorama.init(autoreset=True)
 
 class HttpAdd():
@@ -40,7 +40,7 @@ class HttpAdd():
     
     def Add(self, url):
         try:
-           if url.startswith("http"):
+           if re.search("http(s)", url):
               pass
            else:
               url = "http://"+url
