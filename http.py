@@ -39,15 +39,18 @@ class HttpAdd():
         sys.exit()
     
     def Add(self, url):
-        if url.startswith("http"):
-            pass
-        else:
-            url = "http://"+url
-        if url.split("/")[2] not in self._l:
-            self._l.append(url.split("/")[2])
-            self.print_true(url.split("/")[2], url, "Result")
-        else:
-            self.print_false(url, "Duplicate")
+        try:
+           if url.startswith("http"):
+              pass
+           else:
+              url = "http://"+url
+           if url.split("/")[2] not in self._l:
+              self._l.append(url.split("/")[2])
+              self.print_true(url.split("/")[2], url, "Result")
+           else:
+              self.print_false(url, "Duplicate")
+        except:
+           pass
 
     def Banner(self):
         banner = """
