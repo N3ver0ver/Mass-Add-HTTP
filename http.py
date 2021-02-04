@@ -40,17 +40,17 @@ class HttpAdd():
     
     def Add(self, url):
         try:
-           if re.search("http(s)", url):
-              pass
-           else:
-              url = "http://"+url
-           if url.split("/")[2] not in self._l:
-              self._l.append(url.split("/")[2])
-              self.print_true(url.split("/")[2], url, "Result")
-           else:
-              self.print_false(url, "Duplicate")
+            if re.search("http(s)://", url):
+                pass
+            else:
+                url = "http://"+url
+            if url.split("/")[2] not in self._l:
+                self._l.append(url.split("/")[2])
+                self.print_true(url.split("/")[2], url, "Result")
+            else:
+                self.print_false(url, "Duplicate")
         except:
-           pass
+            pass
 
     def Banner(self):
         banner = """
