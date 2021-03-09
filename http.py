@@ -40,7 +40,7 @@ class HttpAdd():
     
     def Add(self, url):
         try:
-            if re.search("http(s)://", url):
+            if url.startswith("http://") or url.startswith("https://"):
                 pass
             else:
                 url = "http://"+url
